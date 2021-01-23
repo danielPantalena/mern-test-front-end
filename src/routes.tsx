@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { CreateAccount } from './Screens';
+import { CreateAccount, Account } from './Screens';
 
 const Routes: React.FC = () => (
   <BrowserRouter>
     <Switch>
-      <Route path="/" component={CreateAccount} />
+      <Route exact path="/" component={CreateAccount} />
+      <Route path="/:name" component={Account} />
     </Switch>
   </BrowserRouter>
 );
