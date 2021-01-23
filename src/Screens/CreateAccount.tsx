@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 
-function CreateAccount() {
+const CreateAccount: React.FC = () => {
   const [accountName, setAccountName] = useState('');
-
-  console.log(accountName)
 
   return (
     <div>
       <input onChange={(event) => setAccountName(event.target.value)} />
+      <button>Create account</button>
     </div>
   );
 }
