@@ -1,0 +1,12 @@
+div.flex-column-container {
+  display: flex;
+  flex-flow: column;
+  margin: 2% 5%;
+  padding: 5%;
+}
+
+button, input {
+  margin: 1% 20%;
+  height: 30px;
+  border-radius: 5px;
+}

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { createAccount } from '../services/api';
+import { createAccount } from '../../services/api';
+
+import './style.css';
 
 const CreateAccount: React.FC = () => {
   const [accountName, setAccountName] = useState<string | undefined>('');
@@ -11,20 +13,21 @@ const CreateAccount: React.FC = () => {
   };
 
   const handleCreateAccountClick = async () => {
-    if (!accountName) return null;
+    if (!accountName) return setMessage('Please insert a name');
     createAccount(accountName).then((createdAccount) => {
-      if (!createdAccount) {
-        setMessage('This account already exists');
-      } else {
-        setMessage(`Account created: ${JSON.stringify(createdAccount)}`);
-      }
+      setMessage(
+        createdAccount
+          ? `Account created: ${JSON.stringify(createdAccount)}`
+          : 'Account already exists',
+      );
       setAccountName('');
     });
   };
 
   return (
-    <div>
-      <input value={accountName} onChange={handleNameInput} />
+    <div className="flex-column-container">
+      <h1>Create an Account</h1>
+      <input className="name-input" value={accountName} onChange={handleNameInput} />
       <button onClick={handleCreateAccountClick}>Create account</button>
       <p>{message}</p>
     </div>

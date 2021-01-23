@@ -1,2 +1,2 @@
-export { default as CreateAccount } from './CreateAccount';
-export { default as Account } from './Account';
+export { default as CreateAccount } from './CreateAccount/CreateAccount';
+export { default as Account } from './Account/Account';

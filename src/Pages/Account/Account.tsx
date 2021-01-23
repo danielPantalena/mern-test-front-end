@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getAccount } from '../services/api';
+import { getAccount } from '../../services/api';
 
 interface IParams {
   name: string;
