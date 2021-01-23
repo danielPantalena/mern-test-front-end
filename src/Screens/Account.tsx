@@ -30,7 +30,9 @@ const Account: React.FC = () => {
 
   return (
     <div>
-      <h3>This page is for <h1>{accountData.name}</h1> the owner of the id {accountData._id}</h3>
+      <h3>This page is for </h3>
+      <h1>{accountData.name}</h1>
+      <p>the owner of the id {accountData._id}</p>
       <button>SHARE</button>
     </div>
   );
