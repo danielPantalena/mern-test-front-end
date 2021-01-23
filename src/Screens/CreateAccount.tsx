@@ -9,6 +9,6 @@ const CreateAccount: React.FC = () => {
       <button>Create account</button>
     </div>
   );
-}
+};
 
 export default CreateAccount;
