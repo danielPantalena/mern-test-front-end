@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { CreateAccount, Account } from './Screens';
+import { CreateAccount, Account } from './Pages';
 
 const Routes: React.FC = () => (
   <BrowserRouter>
