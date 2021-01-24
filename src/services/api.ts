@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const baseURL = process.env.REACT_APP_SERVER ?? 'http://localhost:3333';
+const baseURL = process.env.REACT_APP_SERVER ?? 'http://furnishmypad.com:3000';
 
 const instance = axios.create({
   baseURL,
